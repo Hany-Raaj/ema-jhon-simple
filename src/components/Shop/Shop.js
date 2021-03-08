@@ -4,6 +4,7 @@ import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseMana
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
+import { Link } from 'react-router-dom';
 
 const Shop = () => {
     const frist10 = fakeData.slice(0, 10);
@@ -55,6 +56,9 @@ const Shop = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart}></Cart>
+                    <Link to='/review'>
+                        <button className="main-button">Review Order</button>
+                    </Link>
             </div>
         </div>
     );
